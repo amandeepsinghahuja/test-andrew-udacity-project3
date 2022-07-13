@@ -232,6 +232,7 @@ jobs:
             aws --version
       - run:
           name: CONFIGURE INFRA config-server - 2 roles
+          no_output_timeout: 20m
           command: |
             cd .circleci/ansible
             export ANSIBLE_HOST_KEY_CHECKING=False
